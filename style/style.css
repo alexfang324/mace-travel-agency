@@ -5,7 +5,98 @@ foooter etc. */
 /* navigation bar styling below */
 
 
+/* Styles for screens smaller than 320px (Mobile) DEFAULT*/
+
+    /* Add your mobile-specific styles here */
+    .nav-container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color: blanchedalmond;
+    }
+    .nav-top{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    
+    .nav-list{
+        list-style-type: none;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        align-content: center;
+        display: none;
+
+    }
+    .nav-item_special{
+        display: flex;
+        align-items: center;
+    }
+
+    .show .nav-list{
+        display: block;
+    }
+
+    .nav-link{
+        text-decoration: none;
+        color: black;
+      
+    }
+    .logo{
+        height: 5rem;
+    }
+  
+  /* Styles for screen 780px (Tablet) */
+  @media (min-width: 780px) {
+    /* Add your tablet-specific styles here */
+    .nav-container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .nav-list{
+        display: contents;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .nav-item_special{
+        display: none;
+    }
+    .nav-top{
+        display: inline;
+    }
+
+  }
+  
+  /* Styles for screens larger than or equal to 1200px (Desktop) */
+  @media (min-width: 1200px) {
+    /* Add your desktop-specific styles here */
+    .nav-list{
+        display: flex;
+    }
+  }
+
+
 /* index page styling below */
+
+  /* Styles for screen 780px (Tablet) */
+  @media (min-width: 780px) {
+    /* Add your tablet-specific styles here */
+
+  }
+
+
+  @media (min-width: 1200px) {
+    /* Add your desktop-specific styles here */
+  }
+
+
 
 
 /* about page styling below */
