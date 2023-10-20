@@ -40,8 +40,8 @@ navBar.addEventListener('click', function (){
 
 // Array to hold people's names, links to images and description
 const people = [
-    {name:"Everest Shi", photo: 'images/charlotte-image.jpg', about: "I enrolled in SSD program because I like programming! I also enjoy learning database management and the skill of debugging. Beside I would like to explore the HTML, CSS and JavaScript skill."},
-    {name:"Alex Fang", photo: './images/alex-aguilar.jpg', about: "I joined the SSD program because I enjoy programming and I wanted to learn more languages. I enjoy watching anime with friends and watching youtube videos or playing games."},
+    {name:"Everest Shi", photo: './images/everest-shi.jpg', about: "About Everest"},
+    {name:"Alex Fang", photo: './images/alex-fang.jpg', about: "About Alex"},
     {name:"Carissa Ward", photo: './images/carissa-ward.jpeg', about: "I enrolled in the SSD program because I wanted to switch to a career that would challenge me in a way that would keep me satisfied."},
     {name:"Maria Revelo", photo: './images/maria-revelo.jpg', about: "I joined the SSD program because I want to become a Full Stack Developer and I heard wonderful things about BCIT, very glad I did!."},
 ]
@@ -59,7 +59,7 @@ shuffleArray(people);
 
 const featuredProfile = document.getElementById("featured-profile");
 const profileGroup1 = document.getElementById("profile-group1");
-const profileGroup2 = document.getElementById("profile-group2");
+// const profileGroup2 = document.getElementById("profile-group2");
 
 // A loop to assign the items in the shuffled array to the featured-profile, profile-group1 and profile-group2 sections
 for(let i = 0; i<people.length; i++){
@@ -81,12 +81,12 @@ for(let i = 0; i<people.length; i++){
         featuredProfile.appendChild(article);
     }
 
-    else if(i==1 || i==2){
-        profileGroup1.appendChild(article);
-    }
+    // else if(i==1 || i==2){
+    //     profileGroup1.appendChild(article);
+    // }
 
     else{
-        profileGroup2.appendChild(article);
+        profileGroup1.appendChild(article);
     }
 }
 
