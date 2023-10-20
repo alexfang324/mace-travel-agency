@@ -59,30 +59,6 @@ html {
     .logo{
         height: 5rem;
     }
-
-    /* ~~~~~~~~~~~~~~~ OUR-TEAM PAGE ~~~~~~~~~~~~~~~~~ */
-
-    #our-team-main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding: 2%;
-    }
-
-    article {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Adjustments to maintain aspect ratio for images */
-    .people-images {
-        max-width: 75%;
-        height: auto;
-        display: block;
-        margin-top: 5%;
-    }
   
   /* Styles for screen 780px (Tablet) */
   @media (min-width: 780px) {
@@ -150,5 +126,59 @@ html {
 
 /* our-team page styling below */
 
+#our-team-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2%;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    background-color: blanchedalmond;
+    border-radius: 3%;
+    padding-bottom: 3%;
+}
+
+/* Adjustments to maintain aspect ratio for images */
+.people-images {
+    max-width: 75%;
+    height: auto;
+    display: block;
+    margin-top: 5%;
+}
+
+@media (min-width: 780px) {
+    /* Add your tablet-specific styles here */
+    #article1 {
+        display: grid;
+        grid-template-rows: 10% 90%;
+        grid-template-columns: 50% 50%;
+        padding: 5%;
+    }
+
+    #article1 > img {
+        grid-row: 1 / span 2;
+        margin: 0 auto;
+        max-width: 90%
+    }
+
+    #article1 > p {
+        margin-top: -60%;
+    }
+  }
+
+
+  @media (min-width: 1200px) {
+    /* Add your desktop-specific styles here */
+    #profile-group1 {
+        display: flex;
+        column-gap: 5%;
+    }
+  }
 
 /* login form styling below */
