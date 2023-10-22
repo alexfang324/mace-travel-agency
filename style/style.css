@@ -1,6 +1,13 @@
+@charset "utf-8";
 /* basic cross-page styling below, like body width
-foooter etc. */
-
+footer etc. */
+/* CSS Reset */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 
 /* navigation bar styling below */
 
@@ -32,6 +39,7 @@ foooter etc. */
     .nav-item_special{
         display: flex;
         align-items: center;
+        text-transform: uppercase;
     }
 
     .show .nav-list{
@@ -40,9 +48,14 @@ foooter etc. */
 
     .nav-link{
         text-decoration: none;
+        text-transform: uppercase;
         color: black;
-      
     }
+
+    .active-page {
+        color: dimgrey;
+    }
+      
     .logo{
         height: 5rem;
     }
@@ -61,8 +74,12 @@ foooter etc. */
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        gap: 1rem;
         align-items: center;
+    }
+
+    .nav-link {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
 
     .nav-item_special{
@@ -70,6 +87,11 @@ foooter etc. */
     }
     .nav-top{
         display: inline;
+    }
+
+    .active-page {
+        background-color: crimson;
+        color: blanchedalmond;
     }
 
   }
@@ -104,5 +126,59 @@ foooter etc. */
 
 /* our-team page styling below */
 
+#our-team-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2%;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    background-color: blanchedalmond;
+    border-radius: 3%;
+    padding-bottom: 3%;
+}
+
+/* Adjustments to maintain aspect ratio for images */
+.people-images {
+    max-width: 75%;
+    height: auto;
+    display: block;
+    margin-top: 5%;
+}
+
+@media (min-width: 780px) {
+    /* Add your tablet-specific styles here */
+    #article1 {
+        display: grid;
+        grid-template-rows: 10% 90%;
+        grid-template-columns: 50% 50%;
+        padding: 5%;
+    }
+
+    #article1 > img {
+        grid-row: 1 / span 2;
+        margin: 0 auto;
+        max-width: 90%
+    }
+
+    #article1 > p {
+        margin-top: -60%;
+    }
+  }
+
+
+  @media (min-width: 1200px) {
+    /* Add your desktop-specific styles here */
+    #profile-group1 {
+        display: flex;
+        column-gap: 5%;
+    }
+  }
 
 /* login form styling below */
