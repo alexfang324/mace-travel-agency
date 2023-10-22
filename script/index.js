@@ -8,8 +8,6 @@ const navBarShow = document.querySelector('.nav-list')
 const logo = document.querySelector('.logo')
 const navContainer = document.querySelector('.nav-container')
 
-
-
 function menuToggle(){
 if (isOpen){
   
