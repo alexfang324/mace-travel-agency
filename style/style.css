@@ -1,108 +1,194 @@
+@charset "utf-8";
+
+/* resets */
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
 /* basic cross-page styling below, like body width
 foooter etc. */
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    /*font-family:;
+    background-color:;*/
+}
+
+.wrapper {
+    max-width: 1000px;
+    min-height: 100vh;
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0 auto;
+}
+
+/* Type Styling */
+
+h1, h2, nav a {
+    /*font-family:;*/
+}
+
+p {
+    line-height: 1.4;
+    font-size: 1.2em;
+}
 
 /* navigation bar styling below */
 
-
 /* Styles for screens smaller than 320px (Mobile) DEFAULT*/
+/* Add your mobile-specific styles here */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: blanchedalmond;
+}
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+}
 
-    /* Add your mobile-specific styles here */
-    .nav-container{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        background-color: blanchedalmond;
-    }
-    .nav-top{
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    
-    .nav-list{
-        list-style-type: none;
-        width: 100%;
-        padding: 0;
-        text-align: center;
-        align-content: center;
-        display: none;
+.nav-list {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  align-content: center;
+  display: none;
+}
+.nav-item_special {
+  display: flex;
+  align-items: center;
+}
 
-    }
-    .nav-item_special{
-        display: flex;
-        align-items: center;
-    }
+.show .nav-list {
+  display: block;
+}
 
-    .show .nav-list{
-        display: block;
-    }
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+.logo {
+  height: 5rem;
+}
 
-    .nav-link{
-        text-decoration: none;
-        color: black;
-      
-    }
-    .logo{
-        height: 5rem;
-    }
-  
-  /* Styles for screen 780px (Tablet) */
-  @media (min-width: 780px) {
-    /* Add your tablet-specific styles here */
-    .nav-container{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-    .nav-list{
-        display: contents;
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .nav-item_special{
-        display: none;
-    }
-    .nav-top{
-        display: inline;
-    }
-
+/* Styles for screen 780px (Tablet) */
+@media (min-width: 780px) {
+  /* Add your tablet-specific styles here */
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
   }
-  
-  /* Styles for screens larger than or equal to 1200px (Desktop) */
-  @media (min-width: 1200px) {
-    /* Add your desktop-specific styles here */
-    .nav-list{
-        display: flex;
-    }
+  .nav-list {
+    display: contents;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
   }
 
+  .nav-item_special {
+    display: none;
+  }
+  .nav-top {
+    display: inline;
+  }
+}
+
+/* Styles for screens larger than or equal to 1200px (Desktop) */
+@media (min-width: 1200px) {
+  /* Add your desktop-specific styles here */
+  .nav-list {
+    display: flex;
+  }
+}
 
 /* index page styling below */
 
-  /* Styles for screen 780px (Tablet) */
-  @media (min-width: 780px) {
-    /* Add your tablet-specific styles here */
+/* Styles for screen 780px (Tablet) */
+@media (min-width: 780px) {
+  /* Add your tablet-specific styles here */
+}
 
-  }
-
-
-  @media (min-width: 1200px) {
-    /* Add your desktop-specific styles here */
-  }
-
-
-
+@media (min-width: 1200px) {
+  /* Add your desktop-specific styles here */
+}
 
 /* about page styling below */
 
+/* Styles for screens smaller than 320px (Mobile) DEFAULT*/
+/* Add your mobile-specific styles here */
+
+main .about-main {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.about-main .hero {
+ max-width: 800px;
+ margin: 0 auto 40px;
+ border-bottom: 1px dotted black;
+}
+
+.hero h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+}
+
+.hero p {
+    margin-bottom: 1.5em
+}
+
+.teasers {
+    border-bottom: 1px dotted black;
+}
+
+.teasers h2 {
+    text-align: center;
+    font-size: 1.7em;
+    margin: 0.7em 0;
+}
+
+.teasers p {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.teasers img {
+    display: block;
+}
+
+.activities .h2 {
+    font-size: 1.7em;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+}
+
+.activities p {
+    margin-top: 0;
+}
+
+@media (min-width: 780px) {
+  /* Add your tablet-specific styles here */
+}
+
+@media (min-width: 1200px) {
+  /* Add your desktop-specific styles here */
+}
 
 /* our-team page styling below */
-
 
 /* login form styling below */
