@@ -182,3 +182,82 @@ article {
   }
 
 /* login form styling below */
+
+
+
+
+
+
+/* footer page styling below */
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}
+
+.footer-middle{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-img{
+    background-color: beige;
+    width: 4rem;
+    height: 4rem;
+}
+
+.footer-items{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: beige;
+}
+
+.footer-wrapper{
+    display: flex;
+ justify-content: space-between;
+}
+
+.footer-title{
+    color: bisque;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-text{
+    color: beige;
+}
+
+.social-title{
+    color: beige;
+}
+
+.social-icon{
+    width: 2rem;
+    height: 2rem;
+    background-color: beige;
+
+}
+
+
+
+  /* Styles for screen 780px (Tablet) */
+  @media (min-width: 780px) {
+    /* Add your tablet-specific styles here */
+
+  }
+
+
+  @media (min-width: 1200px) {
+    /* Add your desktop-specific styles here */
+  }
