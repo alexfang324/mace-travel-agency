@@ -98,22 +98,45 @@ if (ourTeamMainElement) {
 }
 
 /* login form javascript below */
-const searchFlightMainElement = document.getElementById('search-flight-main');
-if (searchFlightMainElement) {
-  //add scroll function to scroll button in recent search nav bar
-  const rowElement = document.getElementById('recent-searches-row');
-  const itemElement = document.querySelector('.search-item');
-  const itemWidth = itemElement.getBoundingClientRect().width;
-  const leftScrollElement = document.querySelector('.left.scroll-button');
-  const rightSCrollElement = document.querySelector('.right.scroll-button');
+const $searchDealMainElement = $('#search-deal-main');
+if ($searchDealMainElement) {
+  //helper function for highlighting currently selected search tab and its filter menu
+  function showSeachTabMenu(tabId) {
+    const tabName = tabId.split('-')[1];
+    //set click tab with active styling
+    $('#search-cat-bar').find('a').removeClass('active');
+    $(`#search-${tabName}-tab`).addClass('active');
+    //show filter menu related to the category tab clicked
+    $('#search-form-main').children('div').hide();
+    $(`#search-${tabName}-menu`).show().css({ display: 'flex', padding: 0 });
+  }
+  //add click event listener to the tabs in search form category bar
+  $('#search-stay-tab').on('click', (e) =>
+    showSeachTabMenu(e.currentTarget.id)
+  );
+  $('#search-flight-tab').on('click', (e) =>
+    showSeachTabMenu(e.currentTarget.id)
+  );
+  $('#search-vehicle-tab').on('click', (e) =>
+    showSeachTabMenu(e.currentTarget.id)
+  );
+  $('#search-package-tab').on('click', (e) =>
+    showSeachTabMenu(e.currentTarget.id)
+  );
 
+  //add button scroll for recent search bar
+  const rowElement = $('#recent-searches-row')[0];
+  const itemElement = $('.search-item')[0];
+  const itemWidth = itemElement.getBoundingClientRect().width;
+  const $leftScrollElement = $('.left.scroll-button');
+  const $rightSCrollElement = $('.right.scroll-button');
   //find tile item width (including margin) and use it as scroll offset
   var style = itemElement.currentStyle || window.getComputedStyle(itemElement);
   const itemMargin = parseFloat(style.marginRight);
-  leftScrollElement.addEventListener('click', () => {
+  $leftScrollElement.on('click', () => {
     rowElement.scrollLeft -= itemWidth + 2 * itemMargin;
   });
-  rightSCrollElement.addEventListener('click', () => {
+  $rightSCrollElement.on('click', () => {
     rowElement.scrollLeft += itemWidth + 2 * itemMargin;
   });
 }

@@ -182,7 +182,7 @@ article {
   }
 
 /* login form styling below */
-#search-flight-main{
+#search-deal-main{
     display:flex;
     flex-direction: column;
     gap: 1rem;
@@ -191,7 +191,6 @@ article {
   #search-form{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     border-radius: 0.2rem;
   }
   
@@ -209,7 +208,13 @@ article {
   
   #search-cat-bar ul ui a{
     text-decoration: none;
+    padding:0.5rem;
     color: black;
+  }
+
+  #search-cat-bar ul ui a.active{
+    color: black;
+    border-bottom: solid 2px blue;
   }
   
   #search-form-main{
@@ -221,11 +226,26 @@ article {
   #search-form-main *{
     padding: 0.8rem 0rem;
   }
+
+  .search-inputs{
+    display:none;
+    flex-direction: column;
+    padding:0;
+  }
+
+  #search-flight-menu{
+    display:flex;
+    padding:0;
+  }
+
   
   #search-form-main input{
     text-align: center;
     border:solid 1px grey;
     border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding:0.5rem;
+    margin: 0.2rem;
   }
   
   
@@ -305,7 +325,7 @@ article {
     display:grid;
     gap:0.7rem;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    place-items: center;
+    place-items: top;
   }
   
   .deal-item{
@@ -336,19 +356,17 @@ article {
   .deal-item s{
     font-size: 70%;
   }
-  /* .deal-item p.footer{
-    font-size:70%
-  } */
 
   @media screen and (min-width: 780px) {
     #search-form-main{
       flex-direction: row;
       justify-content: center;
     }
-    #search-form-main input{
-      width:33.33%;
+
+    .search-inputs {
+      flex-direction: row;
     }
-  
+
     #search-form-main button{
       width:7rem;
     }

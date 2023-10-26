@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
     <title>Mace Travel</title>
 </head>
 <body>
@@ -24,24 +26,38 @@
     </header>
 
     <!-- main content below -->
-    <main id="search-flight-main">
+    <main id="search-deal-main">
         <form id="search-form" action="./login" method="post">
             <nav id="search-cat-bar">
                 <ul>
-                    <ui><a href="#">Stays</a></ui>
-                    <ui><a href="#">Flights</a></ui>
-                    <ui><a href="#">Cars</a></ui>
-                    <ui><a href="#">Packages</a></ui>
+                    <ui><a id="search-stay-tab" href="#">Stays</a></ui>
+                    <ui><a id="search-flight-tab" href="#" class="active">Flights</a></ui>
+                    <ui><a id="search-vehicle-tab" href="#">Vehicles</a></ui>
+                    <ui><a id="search-package-tab" href="#">Packages</a></ui>
                 </ul>
             </nav>
             <div id="search-form-main">
-                <input type="text" placeholder="Going to" required />
-                <input type="text" placeholder="Dates" required />
-                <input type="text" placeholder="Travellers" required />
+                <div id="search-stay-menu" class="search-inputs">
+                    <input type="text" placeholder="City" required />
+                    <input type="text" placeholder="Dates" required />
+                    <input type="text" placeholder="Travellers" required />
+                </div>
+                <div id="search-flight-menu" class="search-inputs">
+                    <input type="text" placeholder="Going to" required />
+                    <input type="text" placeholder="Dates" required />
+                    <input type="text" placeholder="Travellers" required />
+                </div>
+                <div id="search-vehicle-menu" class="search-inputs">
+                    <input type="text" placeholder="City" required />
+                    <input type="text" placeholder="Dates" required />
+                </div>
+                <div id="search-package-menu" class="search-inputs">
+                    <input type="text" placeholder="City" required />
+                </div>
                 <button type="submit">Search</button>
             </div>
         </form>
-        <h1>Spon</h1>
+        <h1>Recently Searched</h1>
         <div id="recent-searches">
             <div id="scroll-bar">
                 <button class="left scroll-button">&#10094;</button>
@@ -49,44 +65,44 @@
             </div>
             <div id="recent-searches-row">
                 <div class="search-item">
-                    <img src="./images/airplane-symbol.png" alt="airplane-symbol" />
-                    <p><b>Flights from Vancouver to Capri</b><br>
+                    <img src="./images/space-shuttle-symbol.png" alt="airplane-symbol" />
+                    <p><b>Flights from Nebula Haven to Celestora</b><br>
                         Tues, May 14-Wed, May 29<br>
                         Roundtrip &#8226; 2 travellers</p>
                 </div>
                 <div class="search-item">
                     <img src="./images/hotel-symbol.png" alt="hotel-symbol" />
-                    <p><b>Stays in Victoria</b><br>
+                    <p><b>Stays in Astralium Prime</b><br>
                         Mon, Dec 18-Thurs, Dec 21<br>
                         2 travellers &#8226; 1 room</p>
                 </div>
                 <div class="search-item">
-                    <img src="./images/airplane-symbol.png" alt="airplane-symbol" />
-                    <p><b>Flights from Vancouver to Barcelona</b><br>
+                    <img src="./images/space-shuttle-symbol.png" alt="airplane-symbol" />
+                    <p><b>Flights from Celestora to Galaxaris</b><br>
                         Wed, May 15-Thurs, May 30<br>
                         One way &#8226; 1 traveller</p>
                 </div>
                 <div class="search-item">
-                    <img src="./images/airplane-symbol.png" alt="airplane-symbol" />
-                    <p><b>Flights from Vancouver to Taiwan</b><br>
+                    <img src="./images/space-shuttle-symbol.png" alt="airplane-symbol" />
+                    <p><b>Flights from Luminastra to Novaropolis</b><br>
                         Tues, May 14-Wed, May 29<br>
                         Multi city &#8226; 2 travellers</p>
                 </div>
                 <div class="search-item">
-                    <img src="./images/airplane-symbol.png" alt="airplane-symbol" />
-                    <p><b>Flights from Vancouver to Chiangmai</b><br>
+                    <img src="./images/hotel-symbol.png" alt="hotel-symbol" />
+                    <p><b>Stays in Luminastra</b><br>
+                        Mon, Dec 18-Thurs, Dec 21<br>
+                        2 travellers &#8226; 1 room</p>
+                </div>
+                <div class="search-item">
+                    <img src="./images/space-shuttle-symbol.png" alt="airplane-symbol" />
+                    <p><b>Flights from Novaropolis to Galaxaris</b><br>
                         Tues, May 14-Wed, May 29<br>
                         Roundtrip &#8226; 2 travellers</p>
                 </div>
                 <div class="search-item">
-                    <img src="./images/airplane-symbol.png" alt="airplane-symbol" />
-                    <p><b>Flights from Vancouver to Ho Chi Minh</b><br>
-                        Tues, May 14-Wed, May 29<br>
-                        Roundtrip &#8226; 2 travellers</p>
-                </div>
-                <div class="search-item">
-                    <img src="./images/airplane-symbol.png" alt="airplane-symbol" />
-                    <p><b>Flights from Vancouver to Kyoto</b><br>
+                    <img src="./images/space-shuttle-symbol.png" alt="airplane-symbol" />
+                    <p><b>Flights from Earth to Mars</b><br>
                         Tues, May 14-Wed, May 29<br>
                         Roundtrip &#8226; 2 travellers</p>
                 </div>
@@ -133,7 +149,7 @@
             <div class="deal-item">
                 <img src="./images/deal-image6.png"/>
                 <p class="label">Cosmosville</p>
-                <p>3 days all inclusive camping</p>
+                <p>3 days budget camp package</p>
                 <p class="price">UC &#x210C;779 <s>&#x210C;1059</s></p>
                 <p class="footer">plus taxs and fees</p>
             </div>
@@ -145,9 +161,23 @@
                 <p class="footer">plus taxs and fees</p>
             </div>
             <div class="deal-item">
-                <img src="./images/barcelona.png"/>
+                <img src="./images/deal-image8.png"/>
                 <p class="label">Novaropolis</p>
-                <p>round trip</p>
+                <p>4 days all inclusive pulsar watching</p>
+                <p class="price">UC &#x210C;1249 <s>&#x210C;1349</s></p>
+                <p class="footer">plus taxs and fees</p>
+            </div>
+            <div class="deal-item">
+                <img src="./images/deal-image9.png"/>
+                <p class="label">Novaropolis</p>
+                <p>7 days interstellar cruising</p>
+                <p class="price">UC &#x210C;1249 <s>&#x210C;1349</s></p>
+                <p class="footer">plus taxs and fees</p>
+            </div>
+            <div class="deal-item">
+                <img src="./images/deal-image10.png"/>
+                <p class="label">Novaropolis</p>
+                <p>4 days B&B on Miller's planet</p>
                 <p class="price">UC &#x210C;1249 <s>&#x210C;1349</s></p>
                 <p class="footer">plus taxs and fees</p>
             </div>
