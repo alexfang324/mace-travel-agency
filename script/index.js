@@ -98,8 +98,8 @@ if (ourTeamMainElement) {
 }
 
 /* login form javascript below */
-const $searchDealMainElement = $('#search-deal-main');
-if ($searchDealMainElement) {
+const searchDealMainElement = document.getElementById('search-deal-main');
+if (searchDealMainElement) {
   //helper function for highlighting currently selected search tab and its filter menu
   function showSeachTabMenu(tabId) {
     const tabName = tabId.split('-')[1];
@@ -109,6 +109,12 @@ if ($searchDealMainElement) {
     //show filter menu related to the category tab clicked
     $('#search-form-main').children('div').hide();
     $(`#search-${tabName}-menu`).show().css({ display: 'flex', padding: 0 });
+
+    //make all input fill-in required
+    console.log($('#search-form-main').find('input'));
+    $('#search-form-main').find('input').attr('required',false);
+    $(`#search-${tabName}-menu`).children().attr('required',true);
+
   }
   //add click event listener to the tabs in search form category bar
   $('#search-stay-tab').on('click', (e) =>

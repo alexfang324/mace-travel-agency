@@ -182,6 +182,7 @@ article {
   }
 
 /* login form styling below */
+/* search-deal page styling below */
 #search-deal-main{
     display:flex;
     flex-direction: column;
@@ -260,7 +261,7 @@ article {
   #recent-searches{
     display:flex;
     flex-direction: row;
-    height:7.2rem;
+    height:7rem;
     overflow: hidden;
     position:relative;
   }
@@ -369,6 +370,7 @@ article {
 
     #search-form-main button{
       width:7rem;
+      flex-shrink: 0
     }
   
     #recent-searches:hover #scroll-bar{
