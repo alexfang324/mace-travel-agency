@@ -26,6 +26,30 @@ navBar.addEventListener('click', function () {
 /* index page javascript below */
 
 /* about page javascript below */
+// Get references to the teaser images and the corresponding specifics sections
+const aboutMainElement = document.getElementById('about-main');
+if (aboutMainElement){
+    const activitiesTeaser = document.querySelector('.activities-text');
+    const eatTeaser = document.querySelector('.eat-text');
+    const relaxTeaser = document.querySelector('.relax-text');
+    const activitiesSpecifics = document.querySelector('.activities-specifics');
+    const eatSpecifics = document.querySelector('.eat-specifics');
+    const relaxSpecifics = document.querySelector('.relax-specifics');
+    
+    // Add click event listeners to the teaser images
+    activitiesTeaser.addEventListener('click', () => {
+      activitiesSpecifics.scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    eatTeaser.addEventListener('click', () => {
+      eatSpecifics.scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    relaxTeaser.addEventListener('click', () => {
+      relaxSpecifics.scrollIntoView({ behavior: 'smooth' });
+    });
+}
+
 
 /* our-team page javascript below */
 
@@ -33,7 +57,7 @@ navBar.addEventListener('click', function () {
 const people = [
   {
     name: 'Everest Shi',
-    photo: './images/everest-shi.jpg',
+    photo: './images/everest-shi.jpg.png',
     about: 'About Everest'
   },
   { name: 'Alex Fang', photo: './images/alex-fang.jpg', about: 'About Alex' },
