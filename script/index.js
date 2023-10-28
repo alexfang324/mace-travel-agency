@@ -33,9 +33,9 @@ navBar.addEventListener('click', function (){
 
 /* about page javascript below */
 // Get references to the teaser images and the corresponding specifics sections
-const activitiesTeaser = document.querySelector('.teaser-activities');
-const eatTeaser = document.querySelector('.teaser-eat');
-const relaxTeaser = document.querySelector('.teaser-relax');
+const activitiesTeaser = document.querySelector('.activities-text');
+const eatTeaser = document.querySelector('.eat-text');
+const relaxTeaser = document.querySelector('.relax-text');
 const activitiesSpecifics = document.querySelector('.activities-specifics');
 const eatSpecifics = document.querySelector('.eat-specifics');
 const relaxSpecifics = document.querySelector('.relax-specifics');
