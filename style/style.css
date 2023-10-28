@@ -1,10 +1,4 @@
 @charset "utf-8";
-
-/* resets */
-*, *:before, *:after{
-    box-sizing: border-box;
-}
-
 /* basic cross-page styling below, like body width
 footer etc. */
 /* CSS Reset */
@@ -14,28 +8,6 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-body {
-    margin: 0;
-    /*font-family:;
-    background-color:;*/
-}
-
-/* Type Styling */
-
-h1, h2, nav a {
-    /*font-family:;*/
-}
-
-p {
-    line-height: 1.4;
-    font-size: 1.2em;
-}
-
 /* navigation bar styling below */
 
 /* Styles for screens smaller than 320px (Mobile) DEFAULT*/
