@@ -32,6 +32,26 @@ navBar.addEventListener('click', function (){
 
 
 /* about page javascript below */
+// Get references to the teaser images and the corresponding specifics sections
+const activitiesTeaser = document.querySelector('.teaser-activities');
+const eatTeaser = document.querySelector('.teaser-eat');
+const relaxTeaser = document.querySelector('.teaser-relax');
+const activitiesSpecifics = document.querySelector('.activities-specifics');
+const eatSpecifics = document.querySelector('.eat-specifics');
+const relaxSpecifics = document.querySelector('.relax-specifics');
+
+// Add click event listeners to the teaser images
+activitiesTeaser.addEventListener('click', () => {
+  activitiesSpecifics.scrollIntoView({ behavior: 'smooth' });
+});
+
+eatTeaser.addEventListener('click', () => {
+  eatSpecifics.scrollIntoView({ behavior: 'smooth' });
+});
+
+relaxTeaser.addEventListener('click', () => {
+  relaxSpecifics.scrollIntoView({ behavior: 'smooth' });
+});
 
 
 /* our-team page javascript below */
