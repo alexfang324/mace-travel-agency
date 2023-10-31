@@ -16,11 +16,12 @@ html {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background-color: blanchedalmond;
+  background-color: rgba(231, 221, 205, 0.041);
 }
 .nav-top {
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
 }
 
 .nav-list {
@@ -30,11 +31,13 @@ html {
   text-align: center;
   align-content: center;
   display: none;
+  color: white;
 }
 .nav-item_special {
   display: flex;
   align-items: center;
         text-transform: uppercase;
+        color: white;
 }
 
 .show .nav-list {
@@ -44,7 +47,7 @@ html {
     .nav-link{
         text-decoration: none;
         text-transform: uppercase;
-        color: black;
+        color: white;
     }
 
     .active-page {
@@ -101,21 +104,28 @@ html {
 
 /* index page styling below */
 
+.index-wrapper{
+    background-image: url(../images/lush.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
 .hero-container{
     height: 100vh;
 }
-.hero{
+.hero-index{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     height: 100%;
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../images/ocean.jpg");
-
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../images/lush.jpg"); */
+    background-repeat: no-repeat;
     /* Position and center the image to scale nicely on all screens */
     /* background-position: center;
     background-repeat: no-repeat;
     background-size: cover; */ 
+    background-size: cover;
     position: relative;
     padding: 1rem;
     gap: 2rem;
@@ -641,6 +651,9 @@ footer {
 
 /* our-team page styling below */
 
+.team-wrapper{
+  background-color: black;
+}
 
 #our-team-main {
     display: flex;
@@ -699,6 +712,14 @@ footer {
 
 /* login form styling below */
 /* search-deal page styling below */
+
+.search-wrapper{
+  background-color: black;
+}
+
+.search-text{
+  color: white;
+}
 #search-deal-main{
     display:flex;
     flex-direction: column;
@@ -726,11 +747,11 @@ footer {
   #search-cat-bar ul ui a{
     text-decoration: none;
     padding:0.5rem;
-    color: black;
+    color: white;
   }
 
   #search-cat-bar ul ui a.active{
-    color: black;
+    color: white;
     border-bottom: solid 2px blue;
   }
   
@@ -862,16 +883,21 @@ footer {
   
   .deal-item {
     font-size:1.2rem;
+    color: white;
   }
   .deal-item p.label{
     font-size:1.5rem;
+    color: white;
   }
   
   .deal-item p.price{
     font-size: 1.7rem;
+    color: white;
+
   }
   .deal-item s{
     font-size: 70%;
+    color: white;
   }
 
   @media screen and (min-width: 780px) {
