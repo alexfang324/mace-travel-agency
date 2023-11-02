@@ -58,9 +58,9 @@ const people = [
   {
     name: 'Everest Shi',
     photo: './images/everest-shi.jpg.png',
-    about: 'About Everest'
+    about: 'Everest was named after a mountain.'
   },
-  { name: 'Alex Fang', photo: './images/alex-fang.jpg', about: 'About Alex' },
+  { name: 'Alex Fang', photo: './images/alex-fang.jpg', about: 'Alex does not know what to say.' },
   {
     name: 'Carissa Ward',
     photo: './images/carissa-ward.jpeg',
