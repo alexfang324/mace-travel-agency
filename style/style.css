@@ -12,6 +12,11 @@ html {
 
 /* Styles for screens smaller than 320px (Mobile) DEFAULT*/
 /* Add your mobile-specific styles here */
+
+.nav-wrapper{
+  background-color: black;
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -22,6 +27,7 @@ html {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  
 }
 
 .nav-list {
@@ -85,6 +91,7 @@ html {
     }
     .nav-top{
         display: inline;
+        
     }
 
     .active-page {
@@ -104,14 +111,20 @@ html {
 
 /* index page styling below */
 
+.index-body{
+  background-color: black;
+}
+
 .index-wrapper{
-    background-image: url(../images/lush.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(../images/lush.jpg);
     background-size: cover;
     background-position: center center;
+   
 }
 
 .hero-container{
     height: 100vh;
+    padding: 1rem;
 }
 .hero-index{
     display: flex;
@@ -119,16 +132,10 @@ html {
     justify-content: flex-start;
     align-items: center;
     height: 100%;
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../images/lush.jpg"); */
     background-repeat: no-repeat;
-    /* Position and center the image to scale nicely on all screens */
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */ 
     background-size: cover;
     position: relative;
-    padding: 1rem;
-    gap: 2rem;
+    gap: 1rem;
     
 }
 
@@ -139,6 +146,7 @@ html {
     color: white;
     font-size: 2rem;
 }
+
 
 .hero-text{
     width: 60%;
@@ -156,9 +164,6 @@ html {
     gap: 1.5rem;
 }
 
-.hero-tabletRIGHT{
-
-}
 
 .destination-container{
     display: flex;
@@ -182,7 +187,18 @@ html {
 .hero-button1{
 width: 8rem;
 height: 2rem;
+background-color: rgb(162, 220, 235);
+border-radius: 10px;
+border: 0;
 }
+
+.hero-button1:hover {
+  background-color: rgb(142, 200, 215);
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
 
 .hero-button2{
     width: 2rem;
@@ -199,6 +215,12 @@ height: 2rem;
     height: 1.5rem;
 }
 
+.hero-icon:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+
 .hero-paragraph{
     width: 80%;
     display: flex;
@@ -206,8 +228,12 @@ height: 2rem;
 }
 .hero-smallText{
     color: white;
-    font-size: small;
+    font-size: 0.95rem;
+    padding: 1rem;
     text-align: left;
+    background-color: rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+
 }
 .hero-countdown{
     background-color: rgba(0, 0, 0, 0.20);
@@ -226,19 +252,24 @@ height: 2rem;
     flex-direction: row;
     justify-content: space-between;
     width: 90%;
+    border-radius: 10px;
     gap: 1rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.20);
 }
 
 .recommend-paragraph{
     width: 65%;
-    font-size: x-small;
+    font-size: 0.8rem;
     color: white;
+   
 }
 
 .recommend-title{
     color: white;
     font-size: 1rem;
     width: 40%;
+   
 }
 .destination-card{
     display: flex;
@@ -263,10 +294,52 @@ height: 2rem;
     width: 90%;
   
 }
-/* .spotify{
-    width: 90%;
-    height: 8rem;
-} */
+.review-title-small{
+  color: white;
+  text-align: center;
+}
+
+.testimonials-container {
+  background-color:rgba(151, 207, 230, 0.466); 
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 2rem;
+  width: 100%;
+}
+
+.testimonial-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+}
+
+.testimonial-card{
+  display: flex;
+  
+  gap: 20px;
+  padding-bottom: 0.5rem;
+}
+
+.testimonial-quote{
+  margin: 0;
+  width: 85%;
+}
+
+.testimonial-bottom{
+  display: flex;
+gap: 2rem;
+justify-content: flex-end;
+}
+
+.date{
+  text-align: right;
+}
+
+.testimonial-star{
+  width: 1rem;
+  height: 1rem;
+}
 
 
 
@@ -276,6 +349,7 @@ height: 2rem;
     /* HERO */
     .hero-title{
    font-size: 3rem;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     .hero-items{
       display: flex;
@@ -298,7 +372,9 @@ height: 2rem;
         width: 90%;
     }
     .hero-smallText{
-        font-size: medium;
+        font-size: 1.2rem;
+        font-style: italic;
+        padding: 1rem;
     }
 
     .hero-tablet{
@@ -335,7 +411,17 @@ height: 2rem;
   .recommend-paragraph{
     font-size: medium;
   }
+
+     /* TESTIMONIALS */
+     .testimonials-container{
+      width: 50%;
+    }
   }
+ 
+
+
+
+
 
 
 @media (min-width: 1200px) {
