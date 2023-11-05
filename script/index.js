@@ -170,3 +170,46 @@ if (searchDealMainElement) {
     rowElement.scrollLeft += itemWidth + 2 * itemMargin;
   });
 }
+
+//INDEX COUNTDOWN
+let time = 3*3600 + 12*60 + 45;  
+setInterval(() => {
+    let hours = Math.floor(time/3600);
+    let minutes = Math.floor((time%3600)/60);
+    let seconds = time%60;
+    document.querySelector('.countdown-time').textContent = hours + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+    time--;
+}, 1000);
+
+// TESTIMONIALS
+
+let currentTestimonialIndex = 0;
+const testimonials = document.querySelectorAll('.testimonials-container');
+
+function showTestimonial(index) {
+  // Hide all testimonials
+  testimonials.forEach((testimonial, i) => {
+    testimonial.style.display = i === index ? 'block' : 'none';
+  });
+}
+
+// Show next testimonial
+function nextTestimonial() {
+  currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+  showTestimonial(currentTestimonialIndex);
+}
+
+// Show previous testimonial
+function previousTestimonial() {
+  currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(currentTestimonialIndex);
+}
+
+// Initial display
+showTestimonial(currentTestimonialIndex);
+
+// Bind nextTestimonial and previousTestimonial to your navigation buttons
+
+setInterval(() => {
+  nextTestimonial();
+}, 3000); // Changes the testimonial every 5 seconds

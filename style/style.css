@@ -299,11 +299,24 @@ border: 0;
   text-align: center;
 }
 
+
+
+/* TESTIMONIAL */
+
+.testimonial{
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-wrapper{
+  display: flex;
+}
+
 .testimonials-container {
   background-color:rgba(151, 207, 230, 0.466); 
   padding: 1rem;
   border-radius: 10px;
-  margin: 2rem;
+  margin: 1px;
   width: 100%;
 }
 
@@ -316,7 +329,7 @@ border: 0;
 
 .testimonial-card{
   display: flex;
-  
+  width: 100%;
   gap: 20px;
   padding-bottom: 0.5rem;
 }
@@ -340,6 +353,9 @@ justify-content: flex-end;
   width: 1rem;
   height: 1rem;
 }
+
+
+/*  */
 
 
 
@@ -415,7 +431,10 @@ justify-content: flex-end;
      /* TESTIMONIALS */
      .testimonials-container{
       width: 50%;
+      margin: 0 auto; 
     }
+
+
   }
  
 
