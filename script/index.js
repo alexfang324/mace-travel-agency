@@ -208,8 +208,8 @@ function previousTestimonial() {
 // Initial display
 showTestimonial(currentTestimonialIndex);
 
-// Bind nextTestimonial and previousTestimonial to your navigation buttons
+
 
 setInterval(() => {
   nextTestimonial();
-}, 3000); // Changes the testimonial every 5 seconds
+}, 3000); 
