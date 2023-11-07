@@ -123,7 +123,7 @@ html {
 }
 
 .hero-container{
-    height: 150vh;
+    height: 166vh;
     padding: 1rem;
 }
 .hero-index{
@@ -283,7 +283,7 @@ border: 0;
 
 .recommended-card{
   background-color: rgba(0, 0, 0, 0.589);
-  height: 52rem;
+  height: 62rem;
   width: 100%;
   display: flex;
   border-radius: 5px;
@@ -304,6 +304,11 @@ border: 0;
   align-items: center;
 
 }
+.text-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 .card-price{
   color: turquoise;
@@ -314,6 +319,15 @@ border: 0;
 .card-text{
   display: none;
 }
+.card-button{
+  width: 60%;
+  align-self: center;
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin: 5px;
+}
+
+
 
 
 /* TESTIMONIAL */
@@ -488,6 +502,17 @@ justify-content: flex-end;
     display: contents;
     color: white;
    }
+
+   .card-button{
+    width: 30%;
+    align-self: flex-end;
+    border-radius: 15px;
+    padding: 0.6rem;
+  }
+
+  .card-button-special{
+    align-self: flex-start;
+  }
 
 
   }
