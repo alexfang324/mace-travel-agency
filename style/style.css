@@ -123,7 +123,7 @@ html {
 }
 
 .hero-container{
-    height: 100vh;
+    height: 166vh;
     padding: 1rem;
 }
 .hero-index{
@@ -265,39 +265,68 @@ border: 0;
    
 }
 
+.recommend-wrapper{
+  width: 90%;
+}
+
 .recommend-title{
     color: white;
     font-size: 1rem;
     width: 40%;
    
 }
-.destination-card{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
- 
-}
-.destination-items{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-}
 
-.img-ocean{
-    width: 90%;
-    height: 15rem;
-   border-radius: 5px;
-}
-
-.spotify-container{
-    width: 90%;
-  
-}
 .review-title-small{
   color: white;
   text-align: center;
 }
+
+.recommended-card{
+  background-color: rgba(0, 0, 0, 0.589);
+  height: 62rem;
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card-title{
+  color: white;
+  text-align: center;
+}
+.card-item{
+  width: 16rem;
+  height: 10rem;
+  border-radius: 5px;
+  opacity: 0.8;
+  align-items: center;
+
+}
+.text-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card-price{
+  color: turquoise;
+}
+ .card-item-special{
+  align-self: center;
+  }
+.card-text{
+  display: none;
+}
+.card-button{
+  width: 60%;
+  align-self: center;
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin: 5px;
+}
+
 
 
 
@@ -363,6 +392,11 @@ justify-content: flex-end;
   @media (min-width: 780px) {
     /* Add your tablet-specific styles here */
     /* HERO */
+
+    .hero-container{
+      height: 175vh;
+    }
+
     .hero-title{
    font-size: 3rem;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -406,6 +440,12 @@ justify-content: flex-end;
 
     /* HERO RECOMMEND */
 
+    .recommended-card{
+      align-items: flex-start;
+      display: flex;
+      height: 58rem;
+      padding: 1rem;
+    }
     .recommend-container{
         align-items: baseline;
         gap: 3rem;
@@ -433,9 +473,52 @@ justify-content: flex-end;
       width: 50%;
       margin: 0 auto; 
     }
+      /* CARD */
+
+  .card-top{
+    display: flex;
+    width: 100%;
+  justify-content: space-between;
+   }
+ 
+   .card-item{
+    align-self: flex-start;
+   }
+   .card-item-special{
+   align-self: flex-end;
+   }
+   .card-price{
+    color: turquoise;
+   }
+ 
+ 
+   .card-bottom{
+     display: flex;
+     gap: 20px;
+     padding: 1rem;
+   }
+
+   .card-text{
+    display: contents;
+    color: white;
+   }
+
+   .card-button{
+    width: 30%;
+    align-self: flex-end;
+    border-radius: 15px;
+    padding: 0.6rem;
+  }
+
+  .card-button-special{
+    align-self: flex-start;
+  }
 
 
   }
+
+
+
  
 
 
