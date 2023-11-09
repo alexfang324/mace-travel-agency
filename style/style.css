@@ -123,7 +123,6 @@ html {
 }
 
 .hero-container{
-    height: 166vh;
     padding: 1rem;
 }
 .hero-index{
@@ -145,6 +144,7 @@ html {
     align-items: center;
     color: white;
     font-size: 2rem;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.274) 50%, rgba(255,255,255,0) 100%);
 }
 
 
@@ -225,13 +225,18 @@ border: 0;
     width: 80%;
     display: flex;
     align-self: flex-start;
+    text-shadow:
+    0 0 5px #8ff,
+    0 0 10px #8ff,
+    0 0 20px #8ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
 }
 .hero-smallText{
     color: white;
-    font-size: 0.95rem;
+    font-size: 1rem;
     padding: 1rem;
     text-align: left;
-    background-color: rgba(0, 0, 0, 0.20);
     border-radius: 10px;
 
 }
@@ -251,17 +256,18 @@ border: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     border-radius: 10px;
     gap: 1rem;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.20);
+  
 }
 
 .recommend-paragraph{
     width: 65%;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: white;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
    
 }
 
@@ -271,8 +277,11 @@ border: 0;
 
 .recommend-title{
     color: white;
-    font-size: 1rem;
-    width: 40%;
+    font-size: 1.2rem;
+    width: 50%;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.2), 
+                 6px 6px 0px rgba(0,0,0,0.2),
+                 9px 9px 0px rgba(0,0,0,0.2); 
    
 }
 
@@ -283,7 +292,6 @@ border: 0;
 
 .recommended-card{
   background-color: rgba(0, 0, 0, 0.589);
-  height: 62rem;
   width: 100%;
   display: flex;
   border-radius: 5px;
@@ -318,6 +326,11 @@ border: 0;
   }
 .card-text{
   display: none;
+}
+
+.card-bottom-special{
+  display: flex;
+  flex-direction: column-reverse;
 }
 .card-button{
   width: 60%;
@@ -394,7 +407,7 @@ justify-content: flex-end;
     /* HERO */
 
     .hero-container{
-      height: 175vh;
+      /* height: 175vh; */
     }
 
     .hero-title{
@@ -443,7 +456,6 @@ justify-content: flex-end;
     .recommended-card{
       align-items: flex-start;
       display: flex;
-      height: 58rem;
       padding: 1rem;
     }
     .recommend-container{
@@ -487,6 +499,10 @@ justify-content: flex-end;
    .card-item-special{
    align-self: flex-end;
    }
+
+   .card-bottom-special{
+    flex-direction: initial;
+   }
    .card-price{
     color: turquoise;
    }
@@ -512,6 +528,7 @@ justify-content: flex-end;
 
   .card-button-special{
     align-self: flex-start;
+   
   }
 
 
