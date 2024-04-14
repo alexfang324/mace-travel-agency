@@ -881,7 +881,7 @@ footer {
 /* login form styling below */
 /* search-deal page styling below */
 
-.search-wrapper {
+.search-deal-body {
   background-color: black;
   color: white;
 }
@@ -889,6 +889,7 @@ footer {
 .search-text {
   color: white;
 }
+
 #search-deal-main {
   display: flex;
   flex-direction: column;
@@ -1024,8 +1025,8 @@ footer {
   line-height: 1.5em;
 }
 
-.search-item img {
-  width: 2em;
+.search-item i {
+  font-size: 20px;
 }
 
 #deal-container {
@@ -1076,6 +1077,9 @@ footer {
 
   .search-inputs {
     flex-direction: row;
+  }
+  .search-inputs input {
+    width: 100%;
   }
 
   #search-form-main button {
